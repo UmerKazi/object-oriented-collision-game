@@ -3,10 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Exploding Kittens</title>
+    <title>Big Banana, Small Monkey</title>
 </head>
+<style>
+    body {
+        background-color: white;
+    }
+    .vp {
+        border: black solid 5px;
+        text-align: center;
+        background-color: bisque;
+        
+    }
+    .reload {
+        background-color: #555555;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    .button {
+        text-align: center;
+    }
+</style>
 <body>
-    <div id="app"></div>
+    <div id="app" class="vp"></div>
     <script src="js/kittens.js"></script>
+    <div class="button">
+        <br/>
+        <input type="button" value="Reload Page" class="reload" onClick="document.location.reload(true)">
+    </div>
+    
 </body>
+
 </html>

@@ -182,13 +182,13 @@ class Engine {
         if (this.isPlayerDead()) {
             // If they are dead, then it's game over!
             this.ctx.font = 'bold 30px Impact';
-            this.ctx.fillStyle = '#ffffff';
-            this.ctx.fillText(this.score + ' GAME OVER', 5, 30);
+            this.ctx.fillStyle = 'black';
+            this.ctx.fillText(this.score + ' GAME OVER', 89, 100);
         }
         else {
             // If player is not dead, then draw the score
             this.ctx.font = 'bold 30px Impact';
-            this.ctx.fillStyle = '#ffffff';
+            this.ctx.fillStyle = 'black';
             this.ctx.fillText(this.score, 5, 30);
 
             // Set the time marker and redraw
@@ -200,7 +200,7 @@ class Engine {
     isPlayerDead() {
         var collide = false;
         this.enemies.forEach((enemy) => {
-            if (enemy.y + ENEMY_HEIGHT >= this.player.y && enemy.y < this.player.y + PLAYER_HEIGHT) {
+            if (enemy.y + ENEMY_HEIGHT - 5 >= this.player.y && enemy.y < this.player.y + PLAYER_HEIGHT) {
                 if (enemy.x == this.player.x){
                     collide = true;
                 }
